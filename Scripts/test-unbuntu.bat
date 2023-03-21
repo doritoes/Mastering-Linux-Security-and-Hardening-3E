@@ -2,6 +2,7 @@
 REM Create the Ubuntu VM using unattended process
 REM Still in testing process
 REM Still does interactive setup despite my efforts
+REM this is because Ubuntu Server uses a different installer
 REM missing step - enabling Bridge mode on interface instead of NAT
 PATH|find /i "Oracle\VirtualBox" >nul || set path=%PATH%;C:\Program Files\Oracle\VirtualBox
 SET VM=Ubuntu22
@@ -35,5 +36,5 @@ VBoxManage modifyvm %VM% --macaddress1 auto
 VBoxManage modifyvm %VM% --cableconnected1 on
 VBoxManage modifyvm %VM% --intnet1 Net_DeadEnd
 VBoxManage modifyvm %VM% --graphicscontroller vmsvga
-VBoxManage unattended install %VM% --iso=C:\LinuxSecBook\ISOs\UBUNTUBASE.iso --user="tux" --password="hardLINUXp@$$" --full-user-name="Seth Holcomb" --install-additions --hostname=ubuntu.mylinux.lab --country=US --language=en-US --locale=en_US --time-zone=ET --start-vm=gui
+VBoxManage unattended install %VM% --iso=C:\LinuxSecBook\ISOs\UBUNTUBASE.iso --user=tux --full-user-name=doritoes --password="hardLINUXp@$$" --no-install-additions --hostname=ubuntu.mylinux.lab --country=US --language=en-US --locale=en_US --time-zone=ET --start-vm=gui
 CD C:\LinuxSecBook\Scripts
