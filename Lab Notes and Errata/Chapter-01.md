@@ -42,9 +42,11 @@
     - Repeat for each VM
 
 ## Installing the EPEL repository on the CentOS 7 virtual machines pp. 11-12
-1. If step 1 fails, check if the network interface is working correctly
+1. If page 12 step 1 fails, check if the network interface is working correctly
     - Enable interface on boot
         - sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
         - change `ONBOOT=no` to `ONBOOT=yes`
         - save and quit
     - `sudo systemctl restart network`
+2. Page 12 step 4 will fail on the second command if you are still in /etc/yum.repos.d
+    - `sudo yum list > ~/yum_list.txt`
