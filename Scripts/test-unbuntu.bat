@@ -32,7 +32,6 @@ VBoxManage modifyvm %VM% --macaddress1 auto
 VBoxManage modifyvm %VM% --cableconnected1 on
 VBoxManage modifyvm %VM% --intnet1 Net_DeadEnd
 VBoxManage modifyvm %VM% --graphicscontroller vmsvga
-VBoxManage startvm %VM% --type gui
-REM VBoxManage unattended install %VM% --iso=C:\LinuxSecBook\ISOs\UBUNTUBASE.iso --user=tux --full-user-name=doritoes --password="hardLINUXp@$$" --no-install-additions --hostname=ubuntu.mylinux.lab --country=US --language=en-US --locale=en_US --time-zone=ET --start-vm=gui
+VBoxManage unattended install %VM% --iso=C:\LinuxSecBook\ISOs\UBUNTUBASE.iso --user=tux --full-user-name=doritoes --password="hardLINUXp@$$" --no-install-additions --hostname=ubuntu.mylinux.lab --country=US --language=en-US --locale=en_US --time-zone=ET --start-vm=gui
 REM The Ubuntu VM using unattended process does not work here beccause Ubuntu Server uses a different installer
 CD C:\LinuxSecBook\Scripts
