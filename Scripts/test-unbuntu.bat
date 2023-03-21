@@ -1,7 +1,9 @@
+@ECHO OFF
+REM Create the Ubuntu VM
 PATH|find /i "Oracle\VirtualBox" >nul || set path=%PATH%;C:\Program Files\Oracle\VirtualBox
 SET VM=Ubuntu22
 SET VMFILESPATH=%homedrive%%homepath%\VirtualBox VMs
-REN C:\LinuxSecBook\ISOs\ubuntu-22.04.*-live-server-amd64.iso UBUNTUBASE.iso
+REN C:\LinuxSecBook\ISOs\ubuntu-22.04.*-live-server-amd64.iso UBUNTUBASE.iso >nul
 VBoxManage createvm --name %VM% --ostype Ubuntu22_LTS_64 --register
 CD %VMFILESPATH%\%VM%\
 VBoxManage createmedium disk --filename=%VM%.vdi --size=25000 --format=VDI
