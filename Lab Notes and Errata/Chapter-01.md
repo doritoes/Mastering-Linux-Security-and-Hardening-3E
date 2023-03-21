@@ -40,3 +40,11 @@
         - AlmaLinux8 doesn't show the ability to add a user until you set the root password (i.e., hardLINUXp@$$)
         - AlmaLinux9 doesn't show the ability to add a user even if you set the root password (i.e., hardLINUXp@$$); missing instructions on adding a regular user
     - Repeat for each VM
+
+## Installing the EPEL repository on the CentOS 7 virtual machines pp. 11-12
+1. If step 1 fails, check if the network interface is working correctly
+    - Enable interface on boot
+        - sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+        - change `ONBOOT=no` to `ONBOOT=yes`
+        - save and quit
+    - `sudo systemctl restart network`
