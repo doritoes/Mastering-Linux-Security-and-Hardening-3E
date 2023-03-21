@@ -38,5 +38,5 @@
         - Click Network & Host Name, then the server name
         - Click User Creation, add the user tux and set the password; be sure to check "Make this user administrator", click Done
         - AlmaLinux8 doesn't show the ability to add a user until you set the root password (i.e., hardLINUXp@$$)
-        - AlmaLinux9 doesn't show the ability to add a user even if you set the root password (i.e., hardLINUXp@$$)
+        - AlmaLinux9 doesn't show the ability to add a user even if you set the root password (i.e., hardLINUXp@$$); missing instructions on adding a regular user
     - Repeat for each VM
