@@ -3,7 +3,7 @@ REM missing step - enabling Bridge mode on interface instead of NAT
 PATH|find /i "Oracle\VirtualBox" >nul || set path=%PATH%;C:\Program Files\Oracle\VirtualBox
 SET VM=AlmaLinux9
 SET VMFILESPATH=%homedrive%%homepath%\VirtualBox VMs
-VBoxManage createvm --name %VM% --ostype RedHat_9 --register
+VBoxManage createvm --name %VM% --ostype RedHat_64 --register
 CD %VMFILESPATH%\%VM%\
 VBoxManage createmedium disk --filename=%VM%.vdi --size=25000 --format=VDI
 VBoxManage storagectl %VM% --name "IDE" --add IDE --controller PIIX4
