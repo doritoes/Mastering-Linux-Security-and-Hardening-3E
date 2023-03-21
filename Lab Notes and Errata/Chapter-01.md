@@ -9,7 +9,7 @@
     - Memory: default 2 GB is OK
     - Processors: 2 is OK
     - Click Next
-    - The defaults may be 25GB, 20GB, ?, or ?; anything greater or equal to the book's recommended 20GB is fone
+    - The defaults for Ubuntu (25GB) and the others (20GB) meet or exceed the book's recommended 20GB
     - Click Next
     - Click Finish
     - Repeat for each VM
@@ -20,12 +20,12 @@
     - Browse and select the .iso iamge and click Mount and Retry Boot
     - Continue with the rest of the steps 6-10
     - Repeat for each VM
-3. Kernel Panic with Ubuntu installation
+3. Kernel Panic with Ubuntu and AlmaLinux installations
     - In my Intel test environment, selecting 1 CPU core caused the panic, and changing to 2 resolved the issue
 4. Missing step(s) between steps 6 and 7
     - Install the VM accepting defaults
     - Accept DHCP options
-    - Server names: ubuntu, centos, alma8, alma9
+    - Server names: ubuntu, centos, almalinux8, almalinux9
     - Username: tux
     - Password: hardLINUXp@$$
     - Ubuntu specific
@@ -33,9 +33,10 @@
         - Do not select any snaps
     - Red Hat specific
         - Ignore any "processor not tested" messages
-        - Software Selection: Minimal Install is sufficient; do not install a GUI or desktop environment
+        - Software Selection: 'Minimal Install' or 'Server' is sufficient; do not install a GUI or desktop environment (no "Server with GUI")
         - You need to click on System: Software Destination and click Done in order to continue
-        - Click Begin Installation
+        - Click Network & Host Name, then the server name
         - Click User Creation, add the user tux and set the password; be sure to check "Make this user administrator", click Done
-        - Note: Where is the prompt for the server name?!?!?
+        - AlmaLinux8 doesn't show the ability to add a user until you set the root password (i.e., hardLINUXp@$$)
+        - AlmaLinux9 doesn't show the ability to add a user even if you set the root password (i.e., hardLINUXp@$$)
     - Repeat for each VM
