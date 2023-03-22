@@ -58,3 +58,11 @@
         - change `ONBOOT=no` to `ONBOOT=yes`
         - save and quit
     - `sudo systemctl restart NetworkManager`
+
+2. You will need to log in as `root` on AlmaLinux9
+
+## Configuring a network for VirtualBox virtual machines p. 13
+1. Step 4 completely skips over the process of configuring static IP addresses from the CLI for Ubuntu and Red Hat-based hosts
+    - Ubuntu: https://tecadmin.net/how-to-configure-static-ip-address-on-ubuntu-22-04/
+    - CentOS 7: https://www.cyberciti.biz/faq/howto-setting-rhel7-centos-7-static-ip-configuration/
+    - AlmaLinux: https://linuxconfig.org/how-to-configure-static-ip-address-on-almalinux
