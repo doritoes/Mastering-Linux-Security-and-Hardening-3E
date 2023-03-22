@@ -68,3 +68,11 @@
     - AlmaLinux: https://linuxconfig.org/how-to-configure-static-ip-address-on-almalinux
         - version 8 uses the ifcg format by modifying the file
         - version 9 requires using `nmcli` command
+
+## Creating a virtual machine snapshot with VirtualBox p. 14
+1. The book does not warn you that taking a snapshot of a running VM will include the memory in use, which can greatly increase the size on disk
+2. The book does not show you the command to take a snapshot from the command line. Example:
+```
+SET VM=Ubuntu22-04
+VBoxManage snapshot %VM% take "Snapshot 1" --description "Backup snapshot of initial build"
+```
