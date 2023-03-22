@@ -77,3 +77,9 @@ PATH|find /i "Oracle\VirtualBox" >nul || set path=%PATH%;C:\Program Files\Oracle
 SET VM=Ubuntu22-04
 VBoxManage snapshot %VM% take "Snapshot 1" --description "Backup snapshot of initial build"
 ```
+
+## Missing section on using WSL for SSH access p. 19
+1. The book does not properly discuss using WSL (Windows Subsystem for Linux) for accessing the VMs. There is a passing mention on page 18 paragraph 3 to a build-in Ubuntu virtual machine. This is an option for Windows 10 and Windows 11.
+
+## Keeping the Linux systems updated p. 19
+1. https://cve.mitre.org/ is not resolving (NXDOMAIN) as the time of testing 3/21/2023
