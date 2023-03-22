@@ -83,3 +83,6 @@ VBoxManage snapshot %VM% take "Snapshot 1" --description "Backup snapshot of ini
 
 ## Keeping the Linux systems updated p. 19
 1. https://cve.mitre.org/ is not resolving (NXDOMAIN) as the time of testing 3/21/2023
+
+## Updating Debian-based systems pp. 19-20
+1. No explanation is given why `sudo apt dist-upgrade` is recommended over `sudo apt upgrade`
