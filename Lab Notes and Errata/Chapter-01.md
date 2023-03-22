@@ -50,3 +50,11 @@
     - `sudo systemctl restart network`
 2. Page 12 step 4 will fail on the second command if you are still in /etc/yum.repos.d
     - `sudo yum list > ~/yum_list.txt`
+
+## Installing the EPEL repository on the AlmaLinux 8/9 virtual machines p. 12
+1. If the command `sudo dnf install epel-release` fails
+    - Enable interface on boot
+        - sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+        - change `ONBOOT=no` to `ONBOOT=yes`
+        - save and quit
+    - `sudo systemctl restart NetworkManager`
