@@ -73,6 +73,7 @@
 1. The book does not warn you that taking a snapshot of a running VM will include the memory in use, which can greatly increase the size on disk
 2. The book does not show you the command to take a snapshot from the command line. Example:
 ```
+PATH|find /i "Oracle\VirtualBox" >nul || set path=%PATH%;C:\Program Files\Oracle\VirtualBox
 SET VM=Ubuntu22-04
 VBoxManage snapshot %VM% take "Snapshot 1" --description "Backup snapshot of initial build"
 ```
