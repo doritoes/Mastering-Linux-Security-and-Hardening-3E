@@ -66,3 +66,4 @@
     - Ubuntu: https://tecadmin.net/how-to-configure-static-ip-address-on-ubuntu-22-04/
     - CentOS 7: https://www.cyberciti.biz/faq/howto-setting-rhel7-centos-7-static-ip-configuration/
     - AlmaLinux: https://linuxconfig.org/how-to-configure-static-ip-address-on-almalinux
+        - this page isn't complete; for example, to after editing the file, run `sudo service NetworkManager restart`
