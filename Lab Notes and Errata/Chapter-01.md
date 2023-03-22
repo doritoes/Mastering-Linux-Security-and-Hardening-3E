@@ -86,3 +86,7 @@ VBoxManage snapshot %VM% take "Snapshot 1" --description "Backup snapshot of ini
 
 ## Updating Debian-based systems pp. 19-20
 1. No explanation is given why `sudo apt dist-upgrade` is recommended over `sudo apt upgrade`
+    - Both upgrade and dist-upgrade are used for upgrading the installed packages on the system. However, apt-get upgrade command cannot install a new package or remove an installed package from the system. The dist-upgrade, on the other hand, can install new packages or remove existing packages if required
+    - `apt full-upgrade` performs the same function as `apt-get dist-upgrade`
+        - full-upgrade (apt-get(8)) performs the function of upgrade but will remove currently installed packages if this is needed to upgrade the system as a whole.
+        - Use apt as a first choice, but if you're scripting use apt-get
