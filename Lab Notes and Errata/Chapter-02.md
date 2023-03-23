@@ -1,6 +1,6 @@
 # Chapter 2
 
-## Adding users to a predefined admin group pp. 3335
+## Adding users to a predefined admin group pp. 33-35
 1. The command `sudo usermod -a -G wheel maggie` fails as the user does not exist.
     - `sudo useradd maggie`
     - However, see page 39 when user "Maggie" is added, which is different
