@@ -7,3 +7,6 @@
     - `ecryptfs-mount-private`
     - `ecryptfs-umount-private`
     - For informaton on automounting at login, check [this link about Gentoo Linux](https://wiki.gentoo.org/wiki/Encrypt_a_home_directory_with_ECryptfs)
+    - Until you mount the private home directory, it will be unencrypted
+    - You don't need unmount the home directory for the data to be protected from root
+    - You need to leave the home directory in order to umount it
