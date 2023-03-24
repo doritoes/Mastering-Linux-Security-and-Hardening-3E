@@ -10,3 +10,13 @@
     - Until you mount the private home directory, it will be unencrypted
     - You don't need unmount the home directory for the data to be protected from root
     - You need to leave the home directory in order to umount it
+
+## Hands-on lab for setting password complexity criteria pp. 66-66
+1. The lab does not work correctly because Ubuuntu 22.04 defaults all the credit values to zero
+    - `sudo vi /etc/security/pwquality.conf`
+    - enable and modify minlen to 19 as stated
+    - additionally enable and modify the following
+        - `dcredit = 1`
+        - `ucredit = 1`
+        - `lcredit = 1`
+        - `ocredit = 1`
