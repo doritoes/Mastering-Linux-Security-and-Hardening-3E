@@ -20,3 +20,7 @@
         - `ucredit = 1`
         - `lcredit = 1`
         - `ocredit = 1`
+
+## Hands-on lab for configuring pam_tally2 on CentOS 7 pp. 674-75
+1. Step 3 had the incorrect filename `/etc/pam.d/system.auth`
+    - the correct filename is `/etc/pam.d/system.-auth`
