@@ -19,3 +19,10 @@ sudo iptables -A INPUT -j DROP
 sudo iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 sudo iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
 ```
+
+## Hands-on lab for ip6tables pp. 116-117
+1. Page 116 step 4 of the electronic copy of the book has newlines inserted the code, making it not function
+```
+sudo ip6tables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
+sudo ip6tables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
+```
