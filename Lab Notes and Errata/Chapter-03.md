@@ -24,3 +24,19 @@
 ## Hands-on lab for configuring pam_tally2 on CentOS 7 pp. 674-75
 1. Step 3 had the incorrect filename `/etc/pam.d/system.auth`
     - the correct filename is `/etc/pam.d/system.-auth`
+
+## Detecting compromised passwords pp. 83-87
+1. The script provide on pages 84-86 can be tweaked to remove the necessary output from curl
+```
+#!/bin/bash
+candidate_password=$1
+echo "Candidate password: $candidate_password"
+full_hash=$(echo -n $candidate_password | sha1sum | awk '{print substr($1, 0,
+32)}')
+prefix=$(echo $full_hash | awk '{print substr($1, 0, 5)}')
+suffix=$(echo $full_hash | awk '{print substr($1, 6, 26)}')
+if curl  --no-progress-meter https://api.pwnedpasswords.com/range/$prefix | grep -i $suffix;
+then echo "Candidate password is compromised";
+else echo "Candidate password is OK for use";
+fi
+```
